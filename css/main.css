@@ -1,0 +1,97 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#grad {
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(ellipse at top, #815eff, #c0bcff),
+    radial-gradient(ellipse at bottom, #c0bcff, #c4c0ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.envelope {
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+
+.triangle {
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;  
+}
+#flap {
+  border-top: 150px solid #f1c40f;
+  top: 45px;
+  z-index: 100;
+
+}
+#shadow {
+  top: 49px;
+  border-top: 150px solid rgb(217, 178, 3);
+  border-bottom: 150px solid transparent;
+}
+
+.pocket {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  height: 150px;
+  background-color: rgb(254, 207, 0);
+  border-top: 5px solid rgb(217, 178, 3);
+}
+
+.image-wrapper {
+  position: absolute;
+  width: 160px;
+  height: 260px;
+  left: 70px;
+  top: -150px;
+  transform-origin: center center; /* Ensure scaling and translation origin is at the center */
+  
+  transform: scale(0.5) translate(0px, 275px);
+  transition: 1s;
+  /* ^ Adjust scale and translate values */
+}
+.image-wrapper.animate {
+  transform: scale(1) translate(0px, 0px);
+}
+.image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 80px / 130px; /* This creates an oval shape */
+}
+#otter {
+  width: 306px;
+  height: 306px;
+  object-fit: cover;
+  transform: translateX(-73px) translateY(-25px); /* Center the image inside the oval */
+}
+
+#msg-container {
+  display: none;
+}
+#bubble {
+  position: absolute;
+  top: -165px;
+  left: 170px;
+  width: 115px;
+}
+
+.confetti {
+  display: none;
+}
